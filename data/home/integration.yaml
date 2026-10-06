@@ -11,7 +11,7 @@ content:
     - "Open-source under the BSD-3 license"
   link:
     label: "View deployment documentation"
-    href: "https://jupyterhealth.github.io/software-documentation/"
+    href: "https://docs.jupyterhealth.org/"
   diagram:
     outputs:
       - "Discovery"
@@ -27,4 +27,4 @@ content:
     exchange_label: "Exchange"
     exchange_text: "Ingestion · Standardization · Storage"
     sources_label: "Data Sources"
-    sources_text: "EHRs · devices · wearables · sensors · surveys"
+    sources_text: "EHRs · devices · sensors · apps · surveys"
