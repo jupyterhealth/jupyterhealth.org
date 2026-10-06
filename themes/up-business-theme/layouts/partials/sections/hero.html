@@ -1,6 +1,6 @@
 <section id="{{ .id }}" class="section hero position-relative overflow-hidden">
   {{ with .content.bgImage }}
-    <img class="hero-bg" src="{{ . }}" alt="" aria-hidden="true">
+    <img class="hero-bg" src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="" aria-hidden="true">
   {{ end }}
   <div class="container position-relative hero-content">
     <div class="row">
