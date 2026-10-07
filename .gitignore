@@ -12,3 +12,7 @@ hugo_stats.json
 # Log files
 *.log.DS_Store
 public
+
+# pixi environments
+.pixi/
+pixi.lock

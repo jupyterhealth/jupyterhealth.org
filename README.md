@@ -7,14 +7,11 @@ The public site
 
 ## Building and testing locally
 
-You can run a local build by [installing Hugo](https://gohugo.io/installation/).
-
-The [Hugo quickstart is helpful](https://gohugo.io/getting-started/quick-start/).
-
-If you are editing the site, you can run:
+Use [pixi](https://pixi.sh) to install Hugo and preview the website.
+[Install pixi](https://pixi.sh/latest/installation/), then run:
 
 ```
-hugo server
+pixi run docs:live
 ```
 
 and visit http://localhost:1313 to see a test build of the site.
@@ -23,7 +20,7 @@ Hugo will rebuild on any detected change, so you can have your editor and browse
 Or you can run a single build:
 
 ```
-hugo build
+pixi run docs:build
 ```
 
 The result will be in `./public`, which you can test with:
