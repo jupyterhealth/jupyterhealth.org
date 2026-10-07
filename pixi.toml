@@ -8,5 +8,5 @@ platforms = ["osx-arm64", "osx-64", "linux-64", "win-64"]
 hugo = "==0.162.1"
 
 [tasks]
-"docs:live" = "hugo server"
+"docs:live" = "hugo server --baseURL http://localhost/"
 "docs:build" = "hugo --gc --minify"
