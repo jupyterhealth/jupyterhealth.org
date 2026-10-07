@@ -14,9 +14,26 @@
     <div class="use-cases-grid">
       {{ range .content.cards }}
         <div class="use-case-card">
-          {{ with .tag }}<p class="use-case-tag font-monospace text-uppercase">{{ . }}</p>{{ end }}
-          {{ with .title }}<h3 class="use-case-title fw-bold">{{ . }}</h3>{{ end }}
-          {{ with .text }}<p class="use-case-text">{{ . }}</p>{{ end }}
+          {{ with .tag }}
+            <p class="use-case-tag font-monospace text-uppercase">{{ . }}</p>
+          {{ end }}
+          {{ if .href }}
+            <h3 class="use-case-title fw-bold">
+              <a class="use-case-title-link" href="{{ .href }}" target="_blank" rel="noreferrer">
+                {{ .title }}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M7 17 17 7M7 7h10v10" />
+</svg>
+              </a>
+            </h3>
+          {{ else }}
+            {{ with .title }}
+              <h3 class="use-case-title fw-bold">{{ . }}</h3>
+            {{ end }}
+          {{ end }}
+          {{ with .text }}
+            <p class="use-case-text">{{ . }}</p>
+          {{ end }}
         </div>
       {{ end }}
     </div>
